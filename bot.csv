@@ -1,0 +1,12 @@
+Query,Key word/phrase,Response,Searchable (boolean),Mode
+What sports does Augsburg offer?,sports,"We offer a variety of sports that you can find at <a href=""https://athletics.augsburg.edu/"">https://athletics.augsburg.edu/</a>",T,1
+What is your favorite color?,favorite color,Red,F,0
+What majors and degree programs does Augsburg offer?,degree,"Our majors and programs can be found at <a href=""https://www.augsburg.edu/academics/majors/"">https://www.augsburg.edu/academics/majors/</a>",T,1
+What majors and degree programs does Augsburg offer?,major,"Our majors and programs can be found at <a href=""https://www.augsburg.edu/academics/majors/"">https://www.augsburg.edu/academics/majors/</a>",T,1
+How can I book a study room?,study room,Book study rooms here,F,12
+Where can I register for augsburg,register,"Registration Information is at <a href=""https://www.augsburg.edu/registrar/registration/"">https://www.augsburg.edu/registrar/registration/</a>",T,0
+International student?,international,"International students can find their steps for registeration at <a href = ""https://www.augsburg.edu/strommen/2018/02/21/international-students-steps-to-register-internship-augsburg-experience/"">https://www.augsburg.edu/strommen/2018/02/21/in</a>",T,0
+where is the faculty resources?,faculty resource,"Faculty resources are at <a href=""https://www.augsburg.edu/registrar/registration/"">https://www.augsburg.edu/registrar/registration/</a>https://www.augsburg.edu/registrar/faculty/",T,12
+where can I get information about the public safty department,public safety,"The Public Safety Department's website is <a href=""https://www.augsburg.edu/registrar/registration/"">https://www.augsburg.edu/registrar/registration/</a>https://www.augsburg.edu/dps/",T,12
+where can I get information about the public safty department ,dps,The Public Safety Department's website is https://www.augsburg.edu/dps/,T,12
+Where can I get Information about How I  can Park on campus?,"""park""","Parking On campus can be found at <a href=""https://www.augsburg.edu/dps/parking/"">https://www.augsburg.edu/dps/parking/</a>",T,0
