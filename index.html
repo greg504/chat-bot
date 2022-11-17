@@ -188,6 +188,31 @@
     });
 
 </script>
+<script>
+  function readSheet(){
+    const reader = new FileReader();
+    const file = "bot.csv";
+    reader.readAsText(file);
+    var text = reader.result; //reads bot.csv an turns it into a string
+    const lines = text.split("\n"); //makes a string array of each line of the spreadsheet
+    var table = [];
+    for(var i = 0; i < lines.length; i++){
+      table.concat(lines[i].split(",")); //finaly makes a 2d array of each value in the file, we have a table
+    }
+  function queryBot(input){
+    const notfound = "Placeholder"; //Todo: replace the placeholder with what the bot would say on an invalid input
+    var wrote = false;
+    for(var j = 1; j < table.length; j++){
+      if(input.search(table[j][1]) != -1){//if the key phrase is found in the sanitized (also to all lower case) input
+        writeBot(table[j][2]); //write the designated response
+        wrote = true; //tell the function we wrote something
+        break; //leave the loop since we found the thing to print
+      }
+    }
+    if(!wrote){writeBot(notfound);} //if we didn't find something to print, we print our "not found" message
+  }
+  }
+</script>
 </body>
 
 </html>
