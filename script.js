@@ -6,12 +6,12 @@
   writeBot("Hello, are you an Augsburg student (or family of one), a faculty member, or someone just passing by?");//Ask the initial mode setting question
   function readSheet(){
     const fs = require('fs');
-    var text = [];
-    fs.readFile('./bot.csv', 'utf8', (err, dat) => {
+    var text = "";
+    fs.readFile('bot.csv', 'utf8', (err, dat) => {
   if(err){
     console.error("Error while opening file");
   }
-    text = String(dat);
+    text = dat.toString();
     });
     const lines = text.split("\n"); //makes a string array of each line of the spreadsheet
     var table = [];
@@ -89,9 +89,9 @@
         if (e.code === "Enter") {
             let input = inputField.value;
             inputField.value = "";
-            output(input);
+            queryBot(input);
     }
-  });
+  })});
 
     const utterances = [ 
     ["how are you", "how is life", "how are things"],        //0
@@ -173,17 +173,19 @@ function output(input) {
 function addChatEntry(input, product) {
   const messagesContainer = document.getElementById("chat-body hide");
   
-  const node = document.createElement("li");
-  const textnode = document.createTextNode("Hello");
-  node.id = "user";
-  node.className = "user response";
-  node.innerHTML = `${input}`;
-  messagesContainer.appendChild(textnode);
+  var canvas = document.createElement("canvas");
+  canvas.id = "CursorLayer";
+  canvas.width = 350;
+  canvas.height = 75;
+  var ctx = canvas.getContext("2d");
+  ctx.fillText(input, 200, 25);
+  messagesContainer.appendChild(canvas);
  
-  let botDiv = document.createElement("div");
-  let botText = document.createElement("span");
-  botDiv.id = "bot";
-  botDiv.className = "bot response";
-  botText.innerText = "Typing...";
+  var botText = document.createElement("canvas");
+  botText.id = "CursorLayer";
+  botText.width = 350;
+  botText.height = 75;
+  var botctx = canvas.getContext("2d");
+  botctx.fillText(product, 10, 25);
   messagesContainer.appendChild(botText);
  }
