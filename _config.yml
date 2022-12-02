@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: CSC 443: Chat-Bot Project
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: Sam, Greg, Amina
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://greg504.github.io/chat-bot/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
